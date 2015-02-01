@@ -7,6 +7,9 @@
 //
 
 #import "TMBAppDelegate.h"
+#import "TMBDashboardViewController.h"
+#import "TMBDataManager.h"
+#import "TMBStory.h"
 
 @implementation TMBAppDelegate
 
@@ -16,16 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
     [TMAPIClient sharedInstance].OAuthConsumerKey = @"Omq1FerYKMWeZnlvrIH9Qy3r6YIbyVDPdkQSfU5obu8eJBnt5n";
     [TMAPIClient sharedInstance].OAuthConsumerSecret = @"GHqE8rxq6r0IXCbBkj9NPR4ed0EIBqb8xP9k6PdulMuwsxJfyo";
     [TMAPIClient sharedInstance].OAuthToken = @"5AX3lj6EjPUVTbMOKvuMHBPb8M4NWZN5kerNXo4v7RYmzPKXCC";
     [TMAPIClient sharedInstance].OAuthTokenSecret = @"KsvGQwzzuKM1fv7jMNdEhDqH1NwpJL7JB6AUoxxBEfweLKh6np";
-    
+
     return YES;
 }
 

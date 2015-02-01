@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gEB-Cu-bIx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard View Controller - Tumblr Posts-->
+        <scene sceneID="I14-SX-GDq">
+            <objects>
+                <tableViewController id="fVV-9s-oYa" customClass="TMBDashboardViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="450" sectionHeaderHeight="22" sectionFooterHeight="22" id="WWJ-q9-15t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customCell" rowHeight="450" id="spL-ze-P6v" customClass="TMBCustomTableViewCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="450"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="spL-ze-P6v" id="M1Y-ar-uux">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="449"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbi-Vs-eqa">
+                                            <rect key="frame" x="10" y="5" width="300" height="440"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaG-el-sab" userLabel="Label - Blog Name">
+                                                    <rect key="frame" x="45" y="9" width="222" height="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHv-Eo-SYw" userLabel="Label - DateTime">
+                                                    <rect key="frame" x="45" y="25" width="222" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="283" translatesAutoresizingMaskIntoConstraints="NO" id="rE5-hn-LE6" userLabel="Label - Tags">
+                                                    <rect key="frame" x="9" y="50" width="283" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Notes" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFU-Fu-Wr7" userLabel="Label - Notes">
+                                                    <rect key="frame" x="9" y="413" width="75" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWG-SQ-AsZ" userLabel="Label - Followers">
+                                                    <rect key="frame" x="113" y="413" width="74" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pU4-B7-dOV">
+                                                    <rect key="frame" x="265" y="411" width="27" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="blue-heart-icon.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="likeButtonTapped:" destination="fVV-9s-oYa" eventType="touchUpInside" id="wFP-bz-D4V"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_tumblr.png" translatesAutoresizingMaskIntoConstraints="NO" id="oUv-BU-jTb">
+                                                    <rect key="frame" x="7" y="9" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.72522517872035452" green="0.76199938093471786" blue="0.90465561224489799" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <imageView contentMode="scaleAspectFill" fixedFrame="YES" image="noimage300.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eex-tr-4w1" userLabel="Post Photo View">
+                                            <rect key="frame" x="10" y="100" width="300" height="300"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="oUv-BU-jTb" id="oXA-vO-8au"/>
+                                    <outlet property="blogNameLabel" destination="PaG-el-sab" id="g6M-9O-Z2r"/>
+                                    <outlet property="customCellView" destination="M1Y-ar-uux" id="4Wq-H8-sa7"/>
+                                    <outlet property="followersLabel" destination="AWG-SQ-AsZ" id="CsX-uA-Yg3"/>
+                                    <outlet property="likeButton" destination="pU4-B7-dOV" id="iVA-gi-A93"/>
+                                    <outlet property="storyNotesLabel" destination="KFU-Fu-Wr7" id="mi1-6z-MaW"/>
+                                    <outlet property="storyPhotoView" destination="eex-tr-4w1" id="LfU-YQ-r4v"/>
+                                    <outlet property="tagsLabel" destination="rE5-hn-LE6" id="E8T-K6-XHb"/>
+                                    <outlet property="timeLabel" destination="zHv-Eo-SYw" id="L3D-e4-ntu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="fVV-9s-oYa" id="I5g-8W-vPv"/>
+                            <outlet property="delegate" destination="fVV-9s-oYa" id="XcV-kD-sGM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tumblr Posts" id="CGk-NK-sLq"/>
+                    <connections>
+                        <outlet property="tableView" destination="WWJ-q9-15t" id="XyV-p7-LXM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmb-vj-XML" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="-9"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0iM-G6-cxv">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="gEB-Cu-bIx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0f6-hh-UBJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fVV-9s-oYa" kind="relationship" relationship="rootViewController" id="bqI-dS-Bx0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RW1-Ut-dNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-158" y="-9"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blue-heart-icon.png" width="40" height="40"/>
+        <image name="icon_tumblr.png" width="30" height="30"/>
+        <image name="noimage300.jpg" width="300" height="300"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

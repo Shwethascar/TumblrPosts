@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TMBDashboardViewController.h"
 
-@interface TMBAppDelegate : UIResponder <UIApplicationDelegate>
+@interface TMBAppDelegate : UIResponder <UIApplicationDelegate, NSCoding, NSCopying>
 
 @property (strong, nonatomic) UIWindow *window;
 
